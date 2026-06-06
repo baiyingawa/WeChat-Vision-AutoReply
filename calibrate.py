@@ -8,7 +8,7 @@ import uiautomation as auto
 from PIL import ImageGrab
 
 DIR = os.path.dirname(os.path.abspath(__file__))
-CALIB_FILE = os.path.join(DIR, 'calib.json')
+CALIB_FILE = os.path.join(DIR, 'params', 'calib.json')
 AGENT_FILE = os.path.join(DIR, 'agent.py')
 
 

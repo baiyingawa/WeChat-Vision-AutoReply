@@ -32,7 +32,7 @@ bootstrapped = False
 DIR = os.path.dirname(os.path.abspath(__file__))
 WECHAT_AUTO_CLI = os.path.join(DIR, 'scripts', 'cli.py')
 PYTHON = r'C:\Users\Yu\AppData\Local\Programs\Python\Python310\python.exe'
-CONFIG_AI = os.path.join(DIR, 'config_ai.json')
+CONFIG_AI = os.path.join(DIR, 'params', 'config_ai.json')
 
 # === AI 配置 ===
 DEFAULT_CONFIG = {

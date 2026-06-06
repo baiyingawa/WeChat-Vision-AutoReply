@@ -7,7 +7,8 @@ import uiautomation as auto
 from PIL import Image, ImageDraw
 
 DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, DIR)
+PARENT = os.path.dirname(DIR)
+sys.path.insert(0, PARENT)
 from agent import (find_wx, activate_wx, screenshot_region,
                    NAME_ZONE, CHAT_ZONE, SESSION_START_Y,
                    SESSION_HEIGHT, click_session)
@@ -34,7 +35,7 @@ def visualize():
     pixels = img.load()
 
     # 加载颜色配置
-    calib_path = os.path.join(DIR, 'calib.json')
+    calib_path = os.path.join(PARENT, 'params', 'calib.json')
     calib = {}
     if os.path.exists(calib_path):
         with open(calib_path, 'r') as f:

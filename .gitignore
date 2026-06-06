@@ -9,9 +9,9 @@ build/
 logs/
 *.log
 
-# 配置（保留模板，排除本地配置）
-config_ai.json
-calib.json
+# 本地配置（存储API Key、屏幕校准等敏感数据）
+params/config_ai.json
+params/calib.json
 
 # 截图
 *.png
@@ -26,3 +26,6 @@ Thumbs.db
 # 环境
 venv/
 .env
+
+# WorkBuddy
+.workbuddy/

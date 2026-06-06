@@ -146,8 +146,8 @@ _oled_saver = OLEDSaver()
 PYTHON = r'C:\Users\Yu\AppData\Local\Programs\Python\Python310\python.exe'
 WECHAT_CLI = os.path.join(DIR, 'scripts', 'cli.py')
 CONTACTS_PATH = r'E:\聊天记录\main\contacts_2026-05-31T09-45-12.json'
-AI_CONFIG = os.path.join(DIR, 'config_ai.json')
-RULES_PATH = os.path.join(DIR, '自动回复规则.json')
+AI_CONFIG = os.path.join(DIR, 'params', 'config_ai.json')
+RULES_PATH = os.path.join(DIR, 'profiles', '自动回复规则.json')
 
 logger = logging.getLogger('WeChatAgent')
 logger.setLevel(logging.INFO)
@@ -172,7 +172,7 @@ NAME_ZONE = (120, 116, 440, 145)   # 名称区域 (left, top, right, bottom)
 CHAT_ZONE = (530, 60, 1760, 900)   # 聊天区域 (left, top, right, bottom)
 
 # 自动加载校准数据（calibrate.py 写入）
-_calib_path = os.path.join(os.path.dirname(__file__), 'calib.json')
+_calib_path = os.path.join(os.path.dirname(__file__), 'params', 'calib.json')
 _calib_data = {}
 if os.path.exists(_calib_path):
     try:
@@ -319,7 +319,7 @@ def build_system_prompt(contact_name):
     contact_info = '\n'.join(contact_parts) if contact_parts else ''
 
     # 用户画像文件（固定不变，放 system prompt 可缓存）
-    about_path = os.path.join(DIR, 'About uu.md')
+    about_path = os.path.join(DIR, 'profiles', 'About uu.md')
     if os.path.exists(about_path):
         try:
             with open(about_path, 'r', encoding='utf-8') as f:
