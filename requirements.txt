@@ -1,0 +1,10 @@
+pyautogui==0.9.54
+pyperclip==1.8.2
+uiautomation
+Pillow>=10.4.0
+requests>=2.31.0
+pywin32>=306
+psutil
+comtypes
+winocr
+pycaw

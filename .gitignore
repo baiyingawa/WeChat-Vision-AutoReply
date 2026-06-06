@@ -1,0 +1,28 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# 日志
+logs/
+*.log
+
+# 配置（保留模板，排除本地配置）
+config_ai.json
+calib.json
+
+# 截图
+*.png
+!_oled_black.html
+
+# 系统
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# 环境
+venv/
+.env
