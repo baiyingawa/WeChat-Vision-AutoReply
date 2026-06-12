@@ -1,3 +1,5 @@
+> **本程序为 AI 辅助开发**
+
 # WeChatAuto
 
 纯视觉微信自动回复机器人。通过音频事件回调检测微信消息 → 截图 OCR → AI 决策 → 自动回复。
@@ -29,16 +31,23 @@ python scripts/cli.py --to "联系人名称" --content "图片URL" --action send
 WeChatAuto/
 ├── agent.py              # 主程序：自动回复机器人
 ├── sound_trigger.py      # 音频事件回调检测
-├── test_sound.py         # 音频检测测试
 ├── calibrate.py          # 窗口坐标校准工具
-├── ocr_debug.py          # OCR 调试工具
 ├── listener.py           # 备用方案：Cipher 桥接轮询
+├── install.bat           # 一键安装脚本
+├── run.bat               # 启动脚本
 ├── scripts/
 │   ├── wechat_controller.py    # 核心控制器
 │   └── cli.py                  # 命令行入口
-├── config.json           # 基础配置
-├── config_ai.json        # AI 配置（API key 等）
-├── calib.json            # 校准数据（calibrate.py 生成）
+├── params/               # 参数配置
+│   ├── config.json       # 基础配置
+│   ├── config_ai.json    # AI 配置（本地，已屏蔽）
+│   └── calib.json        # 校准数据（本地，已屏蔽）
+├── profiles/             # 个人资料（本地，不上传）
+│   ├── 自动回复规则.json
+│   └── About uu.md
+├── debug/                # 调试工具
+│   ├── ocr_debug.py
+│   └── test_sound.py
 ├── requirements.txt
 └── README.md
 ```
@@ -62,3 +71,7 @@ scripts/cli.py 发送
 - Windows 10/11 + 微信 PC 客户端
 - Python 3.10+
 - 详见 requirements.txt
+
+---
+
+> 本程序由 AI 辅助开发完成，仅供学习交流使用。
