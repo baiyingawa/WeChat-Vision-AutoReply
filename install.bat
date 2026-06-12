@@ -22,8 +22,8 @@ if not exist params\config_ai.json (
     echo.
     echo 检测到 params\config_ai.json 不存在，需要手动填写 API 密钥。
     echo.
-    set /p api_key=请输入 DeepSeek API Key（回车跳过，之后可在管理面板填写^）: 
-    set /p base_url=请输入 API 地址（默认: https://api.deepseek.com^）: 
+    set /p api_key=请输入 API Key（回车跳过，之后可在管理面板填写^）: 
+    set /p base_url=请输入 API 地址（如https://api.deepseek.com^）: 
     if "!base_url!"=="" set base_url=https://api.deepseek.com
     if not "!api_key!"=="" (
         echo {"enabled":true,"auto_reply":true,"active_mode":"other","modes":{"coding":{"prompt":"正在编程中"},"slacking":{"prompt":"摸鱼中..."},"gaming":{"prompt":""},"other":{"prompt":""}},"apiKey":"!api_key!","baseUrl":"!base_url!","model":"deepseek-chat","temp_prompt":"","oled_enabled":false,"ocr_engine":"auto"} > params\config_ai.json
