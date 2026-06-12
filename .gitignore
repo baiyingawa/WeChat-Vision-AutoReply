@@ -15,7 +15,9 @@ params/calib.json
 
 # 截图
 *.png
-!_oled_black.html
+
+# 隐私数据（不提交到公开仓库）
+profiles/
 
 # 系统
 .DS_Store
